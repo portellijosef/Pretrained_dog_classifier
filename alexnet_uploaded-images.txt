@@ -1,0 +1,86 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Prints 10 filenames from folder pet_images/
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:                      dog_3.jpg  label:                        dog
+ 2 key:                 skyline_01.jpg  label:                    skyline
+ 3 key:                     dog_02.jpg  label:                        dog
+ 4 key:                   duck_01.jpeg  label:                       duck
+ 5 key:                    dog_01.jpeg  label:                        dog
+
+     MATCH:
+
+                   dog_01.jpeg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+ NOT A MATCH:
+
+                     dog_3.jpg: 
+Real:                        dog   Classifier:               brittany spaniel
+
+                skyline_01.jpg: 
+Real:                    skyline   Classifier:                    convertible
+
+                    dog_02.jpg: 
+Real:                        dog   Classifier:              brabancon griffon
+
+                  duck_01.jpeg: 
+Real:                       duck   Classifier:                          drake
+
+# Total Images 5 # Matches: 1 # NOT Matches: 4
+
+     MATCH:
+
+                   dog_01.jpeg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                     dog_3.jpg: 
+Real:                        dog   Classifier:               brittany spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                skyline_01.jpg: 
+Real:                    skyline   Classifier:                    convertible  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    dog_02.jpg: 
+Real:                        dog   Classifier:              brabancon griffon  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  duck_01.jpeg: 
+Real:                       duck   Classifier:                          drake  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 5 # Matches: 1 # NOT Matches: 4
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  3  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  33.3
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  3  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  33.3
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   5
+N Dog Images        :   3
+N Not-Dog Images    :   2
+ 
+pct_match 20.0 %
+pct_correct_dogs 100.0 %
+pct_correct_breed 33.33333333333333 %
+pct_correct_notdogs 100.0 %
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:               brittany spaniel
+Real:                        dog   Classifier:              brabancon griffon
+
+** Total Elapsed Runtime: 0:0:4
